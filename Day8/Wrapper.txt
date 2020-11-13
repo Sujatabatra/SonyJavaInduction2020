@@ -1,0 +1,16 @@
+
+Primitive Type    ==> Wrapper classes
+1. byte           ==> Byte : Byte(byte), Byte(String)
+2. short          ==> Short : Short(short), Short(String)
+3. int            ==> Integer : Integere(int),Integer(String)
+4. long           ==> Long : Long(long),Long(String)
+5. float          ==> Float : Float(float),Float(String)
+6. double         ==> Double : Double(double),Double(String)
+7. char           ==> Character : Character(char)
+8. boolean        ==> Boolean : Boolean(boolean),Boolean(String)
+
+
+HashMap<Employee,Project>
+
+employee : eid,ename
+project : projectid,projectname
