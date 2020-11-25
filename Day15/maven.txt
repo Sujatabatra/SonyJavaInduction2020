@@ -1,0 +1,20 @@
+1.Compile java classes 
+2.Compile test cases
+3.Running test Cases
+4.packaging applicating (.jar)
+
+Maven : Build tool, Project Management Tool
+
+mvn -version
+mvn archetype:generate
+group id: package structing
+ArtifactId: name of project
+Archetype: type of project (quickstart)
+mvn compile
+mvn test
+mvn clean
+mvn install
+mvn site
+mvn eclipse:eclipse
+
+pom.xml : project object model

@@ -1,0 +1,16 @@
+SDLC
+1.Requirement Analysis/ feasibility Study : Requirement Document
+2. design : design document
+3. coding
+4. testing : unit testing, integration testing
+5. implementation and maintainance
+
+
+TDD : Test Driven Development
+test before you code
+
+Requirement document
+Test case expected result sheet
+
+Junit : Unit testing framework which will let us write unit test cases
+
