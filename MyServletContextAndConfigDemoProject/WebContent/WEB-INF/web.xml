@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>MyServletContextAndConfigDemoProject</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>Sujata</param-value>
+	</context-param>
+	<context-param>
+		<param-name>college</param-name>
+		<param-value>DU</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>MyFirst</servlet-name>
+		<servlet-class>com.sujata.demo.MyFirstServlet</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>Shreya</param-value>
+		</init-param>
+		<init-param>
+			<param-name>college</param-name>
+			<param-value>SDM</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyFirst</servlet-name>
+		<url-pattern>/first</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MySecond</servlet-name>
+		<servlet-class>com.sujata.demo.MySecondServlet</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>Netra</param-value>
+		</init-param>
+		<init-param>
+			<param-name>college</param-name>
+			<param-value>Amruta</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MySecond</servlet-name>
+		<url-pattern>/second</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MyThird</servlet-name>
+		<servlet-class>com.sujata.demo.MyThirdServlet</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>Gautam</param-value>
+		</init-param>
+		<init-param>
+			<param-name>college</param-name>
+			<param-value>SDM</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyThird</servlet-name>
+		<url-pattern>/third</url-pattern>
+	</servlet-mapping>
+
+</web-app>
