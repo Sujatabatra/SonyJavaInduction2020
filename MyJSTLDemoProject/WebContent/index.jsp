@@ -11,6 +11,7 @@
 <a href="./searchAllEmps">Show All Records</a><br><br>
 <a href="./searchEmp.jsp">Search Employee By ID</a><br><br>
 <a href="./inputEmpForm.jsp">Insert Employee</a><br><br>
+<a href="./jstlFunction.jsp">Click me to see JSTL Function </a>
 <br><br><br>
 
 </body>
