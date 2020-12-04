@@ -1,0 +1,8 @@
+[DEBUG] - com.sujata.demo.Mylog4JExample(main)2020-12-04 11:31:17,456 - [Hello this is debug message]
+[INFO] - com.sujata.demo.Mylog4JExample(main)2020-12-04 11:31:17,459 - [Hello this is info message]
+[WARN] - com.sujata.demo.Mylog4JExample(main)2020-12-04 11:31:17,460 - [Hello this is warn message]
+[ERROR] - com.sujata.demo.Mylog4JExample(main)2020-12-04 11:31:17,460 - [Hello this is error message]
+[DEBUG] - com.sujata.demo.Mylog4JExample(main)2020-12-04 11:31:39,287 - [Hello this is debug message]
+[INFO] - com.sujata.demo.Mylog4JExample(main)2020-12-04 11:31:39,289 - [Hello this is info message]
+[WARN] - com.sujata.demo.Mylog4JExample(main)2020-12-04 11:31:39,289 - [Hello this is warn message]
+[ERROR] - com.sujata.demo.Mylog4JExample(main)2020-12-04 11:31:39,289 - [Hello this is error message]
