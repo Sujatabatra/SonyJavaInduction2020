@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.sujata.bean">
+	<class name="Person" table="Person" discriminator-value="P">
+		<id name="pId" type="int" column="pId">
+		</id>
+		<discriminator column="type"></discriminator>
+
+		<property name="pName" column="pName"></property>
+
+		<subclass name="Employee" discriminator-value="E">
+			<property name="designation" column="designation"></property>
+			<property name="department" column="department"></property>
+			<property name="salary" column="salary"></property>
+		</subclass>
+		
+		<subclass name="BusinessMan" discriminator-value="B">
+			<property name="natureOfBusiness" column="natureOfBusiness"></property>
+			<property name="annualTurnover" column="annualTurnover"></property>
+		</subclass>
+		
+	</class>
+</hibernate-mapping>

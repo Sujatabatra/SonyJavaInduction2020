@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.sujata.bean">
+	<class name="Person" table="Person">
+		<id name="pId" type="int" column="pId">
+		</id>
+		<property name="pName" column="pName"></property>
+
+		<joined-subclass name="Employee">
+			<key column="pId"></key>
+			<property name="designation" column="designation"></property>
+			<property name="department" column="department"></property>
+			<property name="salary" column="salary"></property>
+		</joined-subclass>
+		
+		<joined-subclass name="BusinessMan">
+			<key column="pId"></key>
+			<property name="natureOfBusiness" column="natureOfBusiness"></property>
+			<property name="annualTurnover" column="annualTurnover"></property>
+		</joined-subclass>
+	</class>
+</hibernate-mapping>

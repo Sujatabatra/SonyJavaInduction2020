@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="">
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.password">sujata</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
+		<property name="hibernate.connection.username">system</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
+
+		<mapping resource="com/sujata/bean/person.hbm.xml" />
+
+	</session-factory>
+</hibernate-configuration>
