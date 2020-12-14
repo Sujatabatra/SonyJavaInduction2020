@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<emp id="101">
+    <empName>Akanksha</empName>
+    <deptt>Sales</deptt>
+    <empDesig>Executive</empDesig>
+    <salary>12345.0</salary>
+</emp>
