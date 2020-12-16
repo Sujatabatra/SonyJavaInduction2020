@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="Ganesh" class="com.sujata.component.Dancer"></bean>
+<bean id="Manas" class="com.sujata.component.Singer"></bean>
+<bean id="Manju" class="com.sujata.component.Juggler"></bean>
+</beans>
