@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- If map have key as well as value both of the type String we can use props 
+		for setter and constructor injection -->
+	<bean id="Ganesh" class="com.sujata.component.Dancer">
+		<property name="songsStyles">
+			<props>
+				<prop key="Perfect">Rock</prop>
+				<prop key="Beliver">Hip Hop</prop>
+				<prop key="The Hall Of Fame">Free</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- Constructor Injection -->
+	<bean id="Manas" class="com.sujata.component.Singer">
+		<constructor-arg name="songs">
+			<set>
+				<value>Perfect</value>
+				<value>Beliver</value>
+				<value>The Hall Of Fame</value>
+			</set>
+		</constructor-arg>
+	</bean>
+
+	<!-- Setters Injection -->
+	<bean id="Disha" class="com.sujata.component.Singer">
+		<property name="songs">
+			<set>
+				<value>Dynamite</value>
+				<value>Senorita</value>
+				<value>Memories</value>
+				<value>Titatnic Title Track</value>
+			</set>
+		</property>
+	</bean>
+
+	<!-- Constructor Injection -->
+	<bean id="Manju" class="com.sujata.component.Juggler">
+		<constructor-arg name="balls">
+			<list>
+				<value>5</value>
+				<value>3</value>
+				<value>8</value>
+				<value>5</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="guitar" class="com.sujata.component.Guitar"></bean>
+	<bean id="tabla" class="com.sujata.component.Tabla"></bean>
+	<bean id="drum" class="com.sujata.component.Drum"></bean>
+
+
+	<bean id="Naveen" class="com.sujata.component.Instrumentalist">
+		<constructor-arg name="songsInstruments">
+			<map>
+				<entry key="Dynamite" value-ref="tabla"></entry>
+				<entry key="Memories" value-ref="drum"></entry>
+				<entry key="Titanic" value-ref="guitar"></entry>
+				<entry key="Perfect" value-ref="drum"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+	
+</beans>

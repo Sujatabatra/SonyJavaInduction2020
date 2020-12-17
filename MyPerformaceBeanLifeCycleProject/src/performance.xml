@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="myInit" default-destroy-method="myDestroy">
+
+	<bean id="Ganesh" class="com.sujata.component.Dancer" init-method="myCustomInit" destroy-method="myCustomDestroy" scope="prototype">
+		<property name="style" value="Hip Hop"></property>
+	</bean>
+	
+	<bean id="Manas" class="com.sujata.component.Singer" lazy-init="true"></bean>
+	
+	<bean id="Manju" class="com.sujata.component.Juggler"></bean>
+	
+	<bean id="customBeanPostProcessor" class="com.sujata.component.CustomBeanPostProcessor"></bean>
+
+</beans>

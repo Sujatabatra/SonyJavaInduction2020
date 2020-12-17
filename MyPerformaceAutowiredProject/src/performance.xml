@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="Ganesh" class="com.sujata.component.Dancer">
+		<property name="style" value="Hip Hop"></property>
+	</bean>
+
+	<!-- Constructor Injection -->
+	<bean id="Manas" class="com.sujata.component.Singer">
+		<constructor-arg name="song" value="Any Song"></constructor-arg>
+	</bean>
+
+	<!-- Setters Injection -->
+	<bean id="Disha" class="com.sujata.component.Singer">
+		<property name="song" value="Dynamite"></property>
+	</bean>
+
+	<!-- Constructor Injection -->
+	<bean id="Manju" class="com.sujata.component.Juggler">
+		<constructor-arg name="balls" value="5"></constructor-arg>
+	</bean>
+	
+	<bean id="guitar" class="com.sujata.component.Guitar" autowire-candidate="false"></bean>  
+	<bean id="instrument" class="com.sujata.component.Tabla" autowire-candidate="false"></bean>
+	<bean id="drum" class="com.sujata.component.Drum" ></bean>
+
+
+	<bean id="Naveen" class="com.sujata.component.Instrumentalist" autowire="constructor">
+		<!--  <constructor-arg name="instrument" ref="guitar"></constructor-arg>-->
+	</bean>
+	<!--  
+	<bean id="Balamurali" class="com.sujata.component.Instrumentalist" autowire="byName">
+	</bean>
+	-->
+	<bean id="Rithies" class="com.sujata.component.Instrumentalist" autowire="byType">
+	</bean>
+	
+</beans>
