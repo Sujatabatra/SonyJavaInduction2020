@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean id="Ganesh" class="com.sujata.component.Dancer">
+		<property name="style" value="Hip Hop"></property>
+	</bean>
+
+	<!-- Constructor Injection -->
+	<bean id="Manas" class="com.sujata.component.Singer">
+		<constructor-arg name="song" value="Any Song"></constructor-arg>
+	</bean>
+
+	<!-- Setters Injection -->
+	<bean id="Disha" class="com.sujata.component.Singer">
+		<property name="song" value="Dynamite"></property>
+	</bean>
+
+	<!-- Constructor Injection -->
+	<bean id="Manju" class="com.sujata.component.Juggler">
+		<constructor-arg name="balls" value="5"></constructor-arg>
+	</bean>
+	<bean id="guitar" class="com.sujata.component.Guitar"></bean>
+	<bean id="tabla" class="com.sujata.component.Tabla"></bean>
+	<bean id="drum" class="com.sujata.component.Drum"></bean>
+
+
+	<bean id="Naveen" class="com.sujata.component.Instrumentalist">
+		<constructor-arg name="instrument" ref="guitar"></constructor-arg>
+	</bean>
+
+	<bean id="Balamurali" class="com.sujata.component.Instrumentalist">
+		<property name="instrument" ref="drum"></property>
+	</bean>
+
+	<bean id="audience" class="com.sujata.component.Audience"></bean>
+	
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
+	
+	<aop:config>
+		<aop:aspect ref="audience">
+		
+			<aop:before method="takeSeats" pointcut="execution(* com.sujata.component.Performer.perform(..))"/>
+			<aop:before method="switchOffPh" pointcut="execution(* com.sujata.component.Performer.perform(..))"/>
+			<aop:after-returning method="applaud" pointcut="execution(* com.sujata.component.Performer.perform(..))"/>
+			<aop:after method="leaveAudi" pointcut="execution(* com.sujata.component.Performer.perform(..))"/>
+			<aop:after-throwing method="demandRefund" pointcut="execution(* com.sujata.component.Performer.perform(..))"/>
+		</aop:aspect>
+	
+	</aop:config>
+</beans>
+
