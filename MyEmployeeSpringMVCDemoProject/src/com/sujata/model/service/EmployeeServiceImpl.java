@@ -4,7 +4,7 @@ package com.sujata.model.service;
 import java.util.ArrayList;
 import java.util.List;
 
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sujata.model.bean.Employee;
@@ -13,6 +13,7 @@ import com.sujata.model.dao.EmployeeDao;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
+	@Autowired
 	private EmployeeDao employeeDao;
 
 	public void setEmployeeDao(EmployeeDao employeeDao) {

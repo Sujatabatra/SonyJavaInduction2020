@@ -13,7 +13,7 @@
 	<bean id="internalResourceViewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="suffix" value=".jsp"></property>
-		<property name="prefix" value="/WEB_INF/empviews"></property>
+		<property name="prefix" value="/WEB-INF/empviews/"></property>
 	</bean>
 
 	<bean id="dataSource"
@@ -29,7 +29,7 @@
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="annotatedClasses">
 			<set>
-				<value>com.sujata.bean.Employee</value>
+				<value>com.sujata.model.bean.Employee</value>
 			</set>
 		</property>
 		<property name="hibernateProperties">

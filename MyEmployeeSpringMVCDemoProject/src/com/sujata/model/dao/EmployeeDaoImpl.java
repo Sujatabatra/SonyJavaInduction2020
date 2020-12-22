@@ -16,6 +16,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -28,6 +29,7 @@ import com.sujata.model.bean.Employee;
 @Repository
 public class EmployeeDaoImpl implements EmployeeDao {
 
+	@Autowired
 	private HibernateTemplate hibernateTemplate;
 
 	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
