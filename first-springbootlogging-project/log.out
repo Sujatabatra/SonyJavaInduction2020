@@ -1,0 +1,6 @@
+2020-12-24 [main] INFO Starting FirstSpringbootloggingProjectApplication using Java 1.8.0_151 on Sujata-PC with PID 6660 (D:\Sony\workspace\SpringWorkSpace\SpringBoot\first-springbootlogging-project\target\classes started by Sujata in D:\Sony\workspace\SpringWorkSpace\SpringBoot\first-springbootlogging-project)
+2020-12-24 [main] INFO No active profile set, falling back to default profiles: default
+2020-12-24 [main] INFO Started FirstSpringbootloggingProjectApplication in 1.535 seconds (JVM running for 2.6)
+2020-12-24 [main] INFO Performer 1 Performing
+2020-12-24 [main] INFO Performer 2 Performing
+2020-12-24 [main] INFO Performer 3 Performing
